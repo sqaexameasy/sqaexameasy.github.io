@@ -1,0 +1,116 @@
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+
+:root {
+	--color-one: #000000;
+	--color-two: #ffffff;
+}
+
+.test {
+  height:18em;
+}
+
+body {
+	position: relative;
+}
+
+.color-one {
+	padding-top:50px;
+	height:35em;
+	color: var(--color-one);
+	background-color: var(--color-two);
+}
+
+.color-two {
+	padding-top:50px;
+	height:35em;
+	color: var(--color-two);
+	background-color: var(--color-one);
+}
+
+/* Slide in css code */
+
+.slideanim {visibility:hidden;}
+.slide {
+    /* The name of the animation */
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    /* The duration of the animation */
+    animation-duration: 1.5s;
+    -webkit-animation-duration: 1.5s;
+    /* Make the element visible */
+    visibility: visible;
+}
+
+/* Go from 0% to 100% opacity (see-through) and specify the percentage from when to slide in the element along the Y-axis */
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translateY(70%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+@-webkit-keyframes slide {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(70%);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+    }
+}
+
+.fa {
+    width: 60px;
+    display: block;
+    text-align: center;
+    color:#000;
+    font:normal 45px 'FontAwesome';
+    line-height:60px;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+.fa-angle-double-down:before {content: "\f103";}
+
+.bounce {
+    position: absolute;
+    left: 50% ;
+    width: 60px;
+    height: 60px ;
+    margin-left:-30px;
+    /*border: 2px solid #000;*/
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    -ms-border-radius:50%;
+    border-radius:50%;
+    animation: bounce 2s infinite;
+    -webkit-animation: bounce 2s infinite;
+    -moz-animation: bounce 2s infinite;
+    -o-animation: bounce 2s infinite;
+}
+
+@-webkit-keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);}
+    40% {-webkit-transform: translateY(-30px);}
+    60% {-webkit-transform: translateY(-15px);}
+}
+
+@-moz-keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {-moz-transform: translateY(0);}
+    40% {-moz-transform: translateY(-30px);}
+    60% {-moz-transform: translateY(-15px);}
+}
+
+@-o-keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {-o-transform: translateY(0);}
+    40% {-o-transform: translateY(-30px);}
+    60% {-o-transform: translateY(-15px);}
+}
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-30px);}
+    60% {transform: translateY(-15px);}
+}
